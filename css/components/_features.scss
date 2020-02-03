@@ -5,44 +5,60 @@
     }
 
     .group {
-        margin: 0 -2em;
 
-        @media (max-width: 768px) {
-            margin: 0;
-        }
     }
 
     .item {
-        text-decoration: none;
-        display: block;
-        color: inherit;
-        position: relative;
+        width: calc(25% - 2em);
         margin: 1em;
-        width: calc(33.333% - 2em);
-        overflow: hidden;
+        padding: 2em;
+        background: #fff;
+        box-shadow: $box-shadow-2;
+        border-radius: 0.25em;
+        text-decoration: none;
+        transition: $transition-1;
 
-        .info {
-            width: 100%;
-            padding: 1em 0;
-            text-align: center;
+        .icon {
+            @include fs(32px);
+            color: $color-1;
+            opacity: 0.5;
+            transition: $transition-1;
         }
 
-        .title {
-
+        h3 {
+            color: $color-2;
+            margin: 0.35em 0;
+            transition: $transition-1;
         }
 
         .description {
-
+            color: $color-3;
+            transition: $transition-1;
         }
 
-        &:hover .image {
-            opacity: 0.9;
+        &:hover,
+        &:focus {
+            background: $color-1;
+            transform: translate(0, -0.5em);
+
+            .icon {
+                color: #fff;
+            }
+
+            h3 {
+                color: #fff;
+            }
+
+            .description {
+                color: #fff;
+                opacity: 0.75;
+            }
         }
+
     }
 
     img {
         width: 100%;
-        height: auto;
     }
 
 }

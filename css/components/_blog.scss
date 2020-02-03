@@ -1,58 +1,93 @@
 .blog {
     margin: 0 auto;
-}
 
-.blog .container {
+    .container {
 
-}
+    }
 
-.blog .group {
+    .group {
 
-}
+    }
 
-.blog .container > .group {
-    margin: 0 -2em;
-}
+    .container > .group {
+        //margin: 0 -2em;
+    }
 
-.blog a {
-    text-decoration: none;
-    color: inherit;
-}
+    .post {
+        width: calc(33.333% - 2em);
+        margin: 1em;
+        background: #fff;
+        border-radius: 0.25em;
+        box-shadow: $box-shadow-2;
+        transition: $transition-1;
+        overflow: hidden;
+        text-decoration: none;
+        color: inherit;
 
-.blog .post {
-    width: calc(33.333% - 2em);
-    margin: 1em;
-    background: #fff;
-    transition: $transition-1;
-}
+        &:hover,
+        &:focus {
+            background: $color-1;
+            transform: translate(0, -0.5em);
 
-.blog .cover {
-    margin: 0 auto;
-    overflow: hidden;
-}
+            .title {
+                color: #fff;
+            }
 
-.blog .cover img {
-    width: 100%;
-    transition: $transition-1;
-}
+            .summary {
+                color: #fff;
+                opacity: 0.75;
+            }
 
-.blog .caption {
-    display: none;
-}
+            .tag {
+                background: rgba(255, 255, 255, 0.5);
+            }
+        }
+    }
 
-.blog .info {
-    padding: 1em;
-    text-align: center;
-}
+    .cover {
+        margin: 0 auto;
+        overflow: hidden;
+    }
 
-.blog .title {
+    .cover img {
+        width: 100%;
+        transition: $transition-1;
+    }
 
-}
+    .caption {
+        display: none;
+    }
 
-.blog .summary {
-    @include fs(16px);
-    display: none;
-    padding-top: 1em;
+    .info {
+        padding: 2em;
+    }
+
+    .title {
+        transition: $transition-1;
+    }
+
+    .summary {
+        margin-top: 0.5em;
+        color: $color-3;
+        transition: $transition-1;
+    }
+
+    .tags {
+        margin-top: 0.5em;
+
+        .tag {
+            font-size: 0.7rem;
+            display: inline-flex;
+            padding: 0.75em;
+            border-radius: 0.125em;
+            line-height: 1;
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 0.25em;
+            border-bottom: 2px solid rgba(0,0,0,0.1);
+            margin: 0.25em 0.25em 0.25em 0;
+            transition: $transition-1;
+        }
+    }
 }
 
 /* First Blog */

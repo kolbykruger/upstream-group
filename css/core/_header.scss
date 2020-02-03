@@ -1,12 +1,14 @@
 .header {
+    height: 6.25em;
 
     .container {
         position: relative;
+        padding: 1.5em;
     }
 
     .group {
         justify-content: space-between;
-        align-items: flex-end;
+        align-items: center;
     }
 
     .logo {

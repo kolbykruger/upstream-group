@@ -19,7 +19,13 @@
     display: block;
     color: $color-0;
     text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
     transition: $transition-1;
+
+    &.button {
+        color: #fff;
+    }
 }
 
 .nav a:hover,
@@ -34,7 +40,9 @@
 .nav a i {
     @include fs(12px);
     cursor: pointer;
-    margin: 0 0 0 6px;
+    margin-left: 0.25em;
+    //opacity: 0.5;
+    color: $color-3;
 }
 
 .nav > ul {
@@ -63,6 +71,7 @@
     background: #fff;
     white-space: nowrap;
     min-width: 200px;
+    border-bottom: 3px solid rgba(0,0,0,0.1);
     box-shadow: $box-shadow-2;
     text-align: left;
     transition: opacity 0.35s;
@@ -74,9 +83,10 @@
 }
 
 .nav ul ul a {
-    @include fs(13px);
-    padding: 10px;
+    @include fs(12px);
+    padding: 1em;
     margin: 0;
+    color: $color-3;
 }
 
 .nav ul ul a:hover,

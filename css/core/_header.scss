@@ -1,5 +1,22 @@
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    background: #fff;
     height: 6.25em;
+    box-shadow: $box-shadow-2;
+    transition: 0s;
+
+    &.sticky {
+        height: 5.25em;
+        transition: $transition-1;
+
+        .logo {
+            max-width: 200px;
+        }
+    }
 
     .container {
         position: relative;
@@ -13,6 +30,7 @@
 
     .logo {
         max-width: 240px;
+        transition: $transition-1;
 
         a {
             display: block;

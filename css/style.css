@@ -1697,8 +1697,17 @@ input[type=submit].button {
 .hero .container {
   max-width: 100%;
   padding: 0;
+  height: 100%;
+}
+.hero .group {
+  height: 100%;
+}
+.hero .image {
+  height: 100%;
 }
 .hero .image img {
+  object-fit: cover;
+  height: 100%;
   width: 100%;
 }
 .hero .text {
